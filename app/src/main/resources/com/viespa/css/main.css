@@ -1,0 +1,315 @@
+/* Global */
+* {
+    -fx-color-bc-1: #F7DDDE;
+    -fx-color-bc-2: #FFC4D0;
+    -fx-color-title-1: #C024D1;
+    -fx-color-title-2: #FF00AA;
+    -fx-color-button-1: #EB0BEF;
+    -fx-color-button-2: #FA618F;
+    -fx-color-table: linear-gradient(to right, #F7DBF0, #D2DAFF);
+    -fx-color-dropshadow: rgba(0, 0, 0, 0.2);
+}
+
+/* Common Layout */
+.background {
+    -fx-background-color: linear-gradient(from 50% 80% to 80% 100.0%, -fx-color-bc-1 0.0%, -fx-color-bc-2 100.0%);
+}
+
+.container {
+    -fx-background-color: rgba(255, 255, 255, 0.4);
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(three-pass-box, -fx-color-dropshadow, 4, 0.1, 2, 2);
+}
+
+.text-title {
+    -fx-fill: linear-gradient(from 35% 80% to 70% 100.0%, -fx-color-title-1 0.0%, -fx-color-title-2 100.0%) !important;
+    -fx-text-fill: linear-gradient(from 35% 80% to 70% 100.0%, -fx-color-title-1 0.0%, -fx-color-title-2 100.0%) !important;
+}
+
+.label {
+    -fx-text-fill: #7F167F;
+}
+
+.label.error {
+    -fx-text-fill: red !important;
+}
+
+.label-hyperlink {
+    -fx-text-fill: #000000;
+    -fx-font-style: italic;
+}
+
+/* Button */
+.button-sidebar {
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-opacity: 0.5;
+    -fx-text-fill: linear-gradient(from 100.0% 25% to 100.0% 85%, -fx-color-button-1 0.0%, -fx-color-button-2 100.0%);
+    -fx-effect: dropshadow(three-pass-box, -fx-color-dropshadow, 4, 0.1, 2, 2);
+}
+
+.button-sidebar:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-opacity: 1;
+    -fx-border-style: hidden hidden hidden solid;
+    -fx-border-color: linear-gradient(from 100.0% 25% to 100.0% 85%, -fx-color-button-1 0.0%, -fx-color-button-2 100.0%);
+    -fx-border-width: 0 0 0 4;
+    -fx-cursor: HAND;
+}
+
+.button-sidebar.active {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-opacity: 1 !important;
+    -fx-border-style: hidden hidden hidden solid;
+    -fx-border-color: linear-gradient(from 100.0% 25% to 100.0% 85%, -fx-color-button-1 0.0%, -fx-color-button-2 100.0%);
+    -fx-border-width: 0 0 0 4;
+}
+
+.button-sidebar:disabled {
+    -fx-opacity: 0.1;
+}
+
+.button-logout {
+    -fx-text-fill: linear-gradient(from 100.0% 25% to 100.0% 85%, -fx-color-button-1 0.0%, -fx-color-button-2 100.0%);
+    -fx-background-color: #7F167F;
+    -fx-background-radius: 30;
+    -fx-cursor: HAND;
+}
+
+.button-logout:hover {
+    -fx-opacity: 0.8;
+}
+
+.button-login {
+    -fx-padding: 6 12;
+    -fx-font-size: 16 !important;
+}
+
+.button-login,
+.button-add-new,
+.button-update {
+    -fx-background-radius: 30;
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-text-fill: linear-gradient(from 100.0% 25% to 100.0% 85%, -fx-color-button-1 0.0%, -fx-color-button-2 100.0%);
+    -fx-border-width: 2;
+    -fx-border-color: linear-gradient(from 100.0% 25% to 100.0% 85%, -fx-color-button-1 0.0%, -fx-color-button-2 100.0%);
+    -fx-border-radius: 30;
+    -fx-font-weight: bold;
+    -fx-cursor: HAND;
+    -fx-font-size: 14;
+    -fx-max-width: 160;
+}
+
+.button-login:hover,
+.button-add-new:hover,
+.button-update:hover {
+    -fx-background-color: linear-gradient(from 100.0% 25% to 100.0% 85%, -fx-color-button-1 0.0%, -fx-color-button-2 100.0%);
+    -fx-text-fill: #fdf6f0;
+}
+
+.button-add-new:disabled,
+.button-update:disabled {
+    -fx-opacity: 0.1;
+}
+
+/* Form Input
+ *
+ * Apply global on all input text field
+ *
+ */
+.text-field,
+.text-area,
+.date-picker,
+.choice-box,
+.combo-box-base {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-radius: 0;
+    -fx-border-color: rgba(1, 1, 1, 0.2);
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 1;
+    -fx-background-insets: 0 0 1 0;
+    -fx-wrap-text: true;
+    -fx-text-fill: #7F167F;
+}
+
+
+.text-field:focused,
+.text-area:focused,
+.choice-box:focused {
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-border-width: 1;
+    -fx-border-color: linear-gradient(from 100.0% 25% to 100.0% 85%, -fx-color-button-1 0.0%, -fx-color-button-2 100.0%);
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: -fx-color-table;
+    -fx-text-fill: #000000;
+}
+
+.date-picker {
+    -fx-background-color: rgba(255, 255, 255, 0);
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: linear-gradient(from 100.0% 25% to 100.0% 85%, -fx-color-button-1 0.0%, -fx-color-button-2 100.0%);
+    -fx-background-radius: 0;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: linear-gradient(from 100.0% 25% to 100.0% 85%, -fx-color-button-1 0.0%, -fx-color-button-2 100.0%);
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+}
+
+.date-picker .cell {
+    -fx-background-color: white;
+}
+
+.date-picker .cell:hover {
+    -fx-background-color: -fx-color-table;
+    -fx-text-fill: #000000;
+}
+
+.date-picker .cell:focused {
+    -fx-background-color: -fx-color-table;
+    -fx-text-fill: #000000;
+}
+
+.date-picker .selected {
+    -fx-background-color: -fx-color-table;
+    -fx-text-fill: #000000;
+}
+
+.date-picker .selected:focused {
+    -fx-background-color: -fx-color-table;
+    -fx-text-fill: #000000;
+}
+
+.date-picker-popup {
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: -fx-color-table;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: #000000;
+}
+
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: -fx-color-table;
+}
+
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: #000000;
+}
+
+.text-area .content {
+    -fx-background-color: #EEE4E5;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.text-area:focused .content {
+    -fx-background-color: #EDDEDF;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.combo-box-base {
+    -fx-background-color: #EEE4E5;
+    -fx-background-radius: 0;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #7F167F;
+}
+
+.combo-box:focused {
+    -fx-background-color: #EDDEDF;
+}
+
+.combo-box .combo-box-popup .list-view .list-cell:hover,
+.combo-box .combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: -fx-color-table;
+}
+
+/* Table View
+ *
+ * Apply global on all table view component
+ *
+ */
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -fx-color-table;
+    -fx-background-insets: 0 12px 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-style: hidden solid hidden hidden;
+    -fx-border-color: rgba(255, 255, 255, 0.4);
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 8;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #93f9b911;
+    -fx-text-background-color: #A555EC;
+    -fx-cursor: HAND;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(187, 145, 194, 0.07);
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+.table-row-cell:even {
+    -fx-background-color: rgba(221, 168, 245, 0.07);
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb {
+    -fx-background-color: -fx-color-table;
+}
+
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color: -fx-color-table;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #FFC7C7;
+    -fx-text-background-color: #A555EC;
+}
+
+.profile-label:hover {
+    -fx-text-fill: linear-gradient(from 35% 80% to 70% 100.0%, -fx-color-title-1 0.0%, -fx-color-title-2 100.0%) !important;
+}
